@@ -75,31 +75,6 @@ npm start
 The app will be available at: **http://localhost:3000**
 Backend API runs on: **http://localhost:5000**
 
----
-
-## Login Credentials
-
-| Field | Value |
-|-------|-------|
-| Username | `boomisupport@easydataintegration.net` |
-| Password | `EDI@boomisupport` |
-
----
-
-## Environment Variables
-
-### backend/.env
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/support_ticketing
-SESSION_SECRET=your_super_secret_session_key_change_this
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
-```
-
----
-
 ## Features
 
 ### Dashboard
