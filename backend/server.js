@@ -13,6 +13,11 @@ const exportRoutes = require('./routes/export');
 const dashboardRoutes = require('./routes/dashboard');
 
 const app = express();
+const isProduction = process.env.NODE_ENV === 'production';
+
+if (isProduction) {
+  app.set('trust proxy', 1);
+}
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/support_ticketing')
@@ -37,8 +42,9 @@ app.use(session({
     ttl: 24 * 60 * 60,
   }),
   cookie: {
-    secure: process.env.NODE_ENV === 'production',
+    secure: isProduction,
     httpOnly: true,
+    sameSite: isProduction ? 'none' : 'lax',
     maxAge: 24 * 60 * 60 * 1000,
   },
 }));
