@@ -100,7 +100,7 @@ Backend API runs on: **http://localhost:5000**
 ### Export
 - Download all tickets for a project as `.xlsx`
 - Sorted by serial number (ascending)
-- Formatted with color-coded priority columns
+- Formatted with color-coded priority column
 - Filename: `<ProjectName>_Tickets.xlsx`
 
 ---
@@ -154,7 +154,7 @@ Backend API runs on: **http://localhost:5000**
 
 ---
 
-## Project Structure
+## Project Structure 
 
 ```
 support-ticketing/
